@@ -6,7 +6,7 @@ function ctf_build_docker(){
 }
 
 function ctf_run_docker(){
-    docker run --rm --name ${CTF_DOCKER_CONTAINER_NAME} -it ${CTF_DOCKER_IMAGE_NAME}
+    docker run  -v ~/CTF:/root/CTF --rm --name ${CTF_DOCKER_CONTAINER_NAME} -it ${CTF_DOCKER_IMAGE_NAME}
 }
 
 function ctf_exec_docker(){
